@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LRU Cache Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1 class="header">LRU CACHE VISUALIZATION</h1>
+
+    <div class="container">
+
+        <div class="info">
+            <h3>What is LRU Cache?</h3>
+            <p>LRU (Least Recently Used) Cache stores a fixed number of items and removes the least recently used item
+                when full.</p>
+            <h3>How it Works:</h3>
+            <ul>
+                <li>Set the cache size</li>
+                <li>PUT -Insert key-value pairs</li>
+                <li>GET-Accessing a key moves it to the front</li>
+                <li>If full, the least recently used item is removed</li>
+            </ul>
+            <h3>Applications:</h3>
+            <ul>
+                <li>Operating Systems: Page replacement in memory management</li>
+                <li>Web Browsers: Caching frequently visited pages</li>
+                <li>Databases: Optimizing query performance</li>
+
+            </ul>
+
+        </div>
+
+        <div class="visualization">
+
+            <label for="capacity">Cache Capacity: </label>
+            <input type="number" id="capacity" min="1" max="10">
+
+            <button onclick="initializeCache()">Cache Size</button>
+            <br>
+            <label for="key">Enter Key: </label>
+            <input type="text" id="key">
+            <label for="value">Enter Value: </label>
+            <input type="text" id="value">
+            <br>
+            
+            <button onclick="insertIntoCache()" style="margin-right: 10px;">Put</button>
+            <button onclick="getValue()">Get</button>
+
+            <div class="cache-status">
+                <h2>Cache Status</h2>
+                <div class="cache-items" id="cacheContainer"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
