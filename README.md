@@ -11,5 +11,4 @@ Eviction Strategy: Least recently used items are evicted to free space for newer
 
 Data Structures Used
 Doubly Linked List: Keeps track of the order of usage of cache items.
-
 Hash Map: Provides quick access to the cache items and their respective nodes in the doubly linked list.
